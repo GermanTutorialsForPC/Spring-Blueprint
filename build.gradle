@@ -8,6 +8,9 @@ ext.hibernateVersion = "4.3.11.Final"
 ext.h2Version = "1.4.191"
 ext.freemarkerVersion = "2.3.23"
 ext.jacksonVersion = "2.6.3"
+ext.slf4jVersion = "1.7.18"
+ext.commonsDbcpVersion = "1.2.2"
+ext.commonsFileuploadVersion = "1.2.1"
 
 ext.servletAPIVersion = "3.0.1"
 ext.javaxInjectVersion = "1"
@@ -22,6 +25,7 @@ repositories {
 
 dependencies {
     compile 'org.springframework:spring-context:' + springVersion
+    compile 'org.springframework:spring-context-support:' + springVersion
     compile 'org.springframework:spring-web:'  + springVersion
     compile 'org.springframework:spring-webmvc:'  + springVersion
     compile 'org.springframework:spring-orm:'  + springVersion
@@ -33,6 +37,10 @@ dependencies {
     compile 'org.freemarker:freemarker:' + freemarkerVersion
     compile 'com.fasterxml.jackson.core:jackson-core:' + jacksonVersion
     compile 'com.fasterxml.jackson.core:jackson-databind:' + jacksonVersion
+
+    compile 'org.slf4j:slf4j-simple:' + slf4jVersion
+    compile 'commons-dbcp:commons-dbcp:' + commonsDbcpVersion
+    compile 'commons-fileupload:commons-fileupload:' + commonsFileuploadVersion
 
     providedCompile 'javax.servlet:javax.servlet-api:' + servletAPIVersion
     providedCompile 'javax.inject:javax.inject:' + javaxInjectVersion
